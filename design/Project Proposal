@@ -1,0 +1,76 @@
+
+Cole Hansen
+
+~ Core Features:
+User Registration & Authentication
+
+1) Filter - as a User/Professional you can chose a filter based on preferences/beliefs/availability/location
+
+2) Ratings - as an Admin you can update the rating system of stars (1-5).
+
+3) Swipe (click) - as a User you can choose which professional of what category you like.
+                   as a Professional you can accept the User and the Terms of working with them.
+
+4) Appointment - as a User you can set an appointment time to meet up within the Professional's availability.
+
+5) Logs - as a Professional you can give a summary of the recent appointment.
+
+6) Message - as a User/Professional you can message in the app
+
+7) SOS - can help alleviate unsafe environments without the need for calling 911.
+                   With permission can call on your behalf with your information.
+
+
+Pregnant users and birth professionals (doctors, midwives, doulas) can sign up and log in.
+
+--------------------------------------------------
+
+Profile Creation:
+Pregnant Users (PU) can specify their birth preferences (Example: hospital birth, home birth, pain management options,
+                                                    Timeframe, C-section preferences...).
+
+Professionals (PRO) can list their availability and their specialties: location, experience, and philosophy on birth.
+
+--------------------------------------------------
+
+Matching System:
+PU can swipe (maybe just click a check mark) through PRO who align with their preferences.
+
+PU must "swipe" first on the desired Professional, the PRO must accept based on the timeframe
+                                                        and the desired need of the Pregnant User.
+
+Once "matched" the PRO is prompted to start the conversation with prompt information at the beginning and
+then have extra information they would like to share. Then the app allows PU to get connected and respond.
+
+Messaging System (Authentication Required)
+
+Booking Appointments (Authentication Required)
+
+PU can schedule consultations with PRO.
+
+--------------------------------------------------
+
+Database Design ERD (I'll make a real one later):
+Users Table (Shared between pregnant users and professionals)
+
+Profiles Table (Stores birth preferences for pregnant users and specialties for professionals)
+
+Matches Table (Tracks mutual matches)
+
+Messages Table (Stores chat history)
+
+Appointments Table (Manages booked consultations)
+
+--------------------------------------------------
+
+API Endpoints:
+User Authentication: [POST /register], [POST /login]...(provided)
+
+Profile Management: [GET /profile], [PUT /profile], [DELETE /profile]
+
+Matching System: [GET /matches], [POST /match],
+
+Messaging: [POST /messages], [GET /messages]
+
+Appointments: [POST /appointments], [GET /appointments], [DELETE /appointments]
+

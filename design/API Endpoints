@@ -1,0 +1,18 @@
+| Endpoint           | Method | Description                        | Success Code | Error Code               | Authentication |
+|--------------------|--------|------------------------------------|--------------|--------------------------|----------------|
+| /register          | POST   | Create a new user                  | 201          | 400, 409, 422            | NONE           |
+| /login             | POST   | Login user and return JWT          | 200          | 400, 401                 | NONE           |
+| /profiles/{userId} | GET    | Returns profile by user ID         | 200          | 400, 401, 404            | REQUIRED       |
+| /profiles          | POST   | Create/Update profile              | 200, 201     | 400, 401, 422            | REQUIRED       |
+| /profiles          | DELETE | Deletes user's profile             | 204          | 401, 404                 | ADMIN          |
+| /profiles          | PUT    | Updates user's profile             | 200          | 400, 401, 404            | REQUIRED       |
+| /matches           | POST   | Creates a new Match                | 200          | 400, 401                 | REQUIRED       |
+| /matches           | DELETE | Deletes a match                    | 204          | 401, 404                 | REQUIRED       |
+| /matches/{userId}  | GET    | returns mach by user's ID          | 200          | 400, 401, 404            | REQUIRED       |
+| /messages          | POST   | Sends message between users        | 200          | 400, 401                 | REQUIRED       |
+| /messages          | DELETE | Deletes message between users      | 204          | 401, 404                 | REQUIRED       |
+| /appointments      | POST   | Books appointments for user        | 200          | 400, 401, 409            | REQUIRED       |
+| /appointments      | PUT    | Updates appointments for user      | 200          | 400, 401, <br/> 404, 409 | PROFESSIONAL   |
+| /friends           | POST   | Sends friend request to other moms | 200          | 400, 401                 | REQUIRED       |
+| /friends/{userId}  | GET    | Returns friend list for user       | 200          | 401, 404                 | REQUIRED       |
+| /friends           | DELETE | Removes friend from friends list   | 204          | 401, 404                 | REQUIRED       |
